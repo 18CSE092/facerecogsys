@@ -26,12 +26,14 @@
           $query = "UPDATE `user` SET `exam`=0 WHERE  `username`='{$_SESSION['username']}' ; ";
           //     echo $query;
           $result = mysqli_query($db, $query);}
+          if(isset($_SESSION['username'])){
           $query = "SELECT * from `user` WHERE `exam`=0  and `username`='{$_SESSION['username']}' ; ";
           //  echo $query;
           $result = mysqli_query($db, $query);
           if(mysqli_num_rows($result) > 0){
             echo "<a class='mr-5 hover:text-white' href='result.php'>Result</a>";}
               else{echo "<a class='mr-5 hover:text-white' href='exam.php'>Exam</a>";}
+          }
         ?>
         <?php 
         if (!isset($_SESSION['success']))
