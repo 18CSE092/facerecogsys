@@ -21,7 +21,7 @@ if (!isset($_SESSION['success']))
 <body>
     <div class="container">
         <div class="table-responsive">
-            <h1 align="center">CSV File to HTML Table Using AJAX jQuery</h1>
+            <h1 align="center">Load the data from the xl sheet</h1>
             <br />
             <?php
 

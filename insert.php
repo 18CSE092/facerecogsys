@@ -1,8 +1,10 @@
-
+<?php include('server.php');
+if (!isset($_SESSION['success']))
+    header('location: login.php'); ?>
 <?php
 
-session_start();
-$username = "srp";
+
+$username = $_SESSION['username'];
 
 $op = "";
 if(isset($_POST["op"]))

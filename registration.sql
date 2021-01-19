@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2021 at 12:22 AM
+-- Generation Time: Jan 19, 2021 at 12:51 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.25
 
@@ -41,7 +41,7 @@ CREATE TABLE `correct` (
 
 INSERT INTO `correct` (`username`, `qnum`, `ans`, `answered`, `visited`) VALUES
 ('srp', 1, '9', 'yes', 'yes'),
-('srp', 5, '2 3 3', 'yes', 'yes'),
+('srp', 5, ' 2 2 3', 'yes', 'yes'),
 ('srp', 2, '', 'no', 'yes'),
 ('srp', 3, 'No output', 'yes', 'yes'),
 ('srp', 4, '0', 'yes', 'yes');
@@ -85,23 +85,24 @@ CREATE TABLE `user` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `staff` int(11) DEFAULT NULL
+  `staff` int(11) DEFAULT NULL,
+  `exam` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `password`, `staff`) VALUES
-(0, 'jashwant', 'jpradhan@gmail.com', '8dca8373dc286a1ba3dbf5e82b694665', NULL),
-(0, 'soumyapasayat', 'srppasayat@gmail.com', 'srp1290', 1),
-(1, 'soumyapasayat', 'srppasayat@gmail.com', 'srp1290', 1),
-(0, 'jashwant', 'jpradhan@gmail.com', 'jashu', NULL),
-(0, 'nice', 'nice@gmail.com', 'nice', NULL),
-(0, 'srp', 'srp@gmail.com', 'srp', NULL),
-(0, 'Bhagbat ', 'bhagbat@gmail.com', 'bhagbat', NULL),
-(0, 'Soumya Ranjan Pasayat', 'soumya9437647840@gmail.com', 'srp12390', NULL),
-(0, 'srpasayat', 'srp@gmail.com', 'srp', NULL);
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `staff`, `exam`) VALUES
+(0, 'jashwant', 'jpradhan@gmail.com', '8dca8373dc286a1ba3dbf5e82b694665', NULL, 1),
+(0, 'soumyapasayat', 'srppasayat@gmail.com', 'srp1290', 1, 1),
+(1, 'soumyapasayat', 'srppasayat@gmail.com', 'srp1290', 1, 1),
+(0, 'jashwant', 'jpradhan@gmail.com', 'jashu', NULL, 1),
+(0, 'nice', 'nice@gmail.com', 'nice', NULL, 1),
+(0, 'srp', 'srp@gmail.com', 'srp', NULL, 0),
+(0, 'Bhagbat ', 'bhagbat@gmail.com', 'bhagbat', NULL, 1),
+(0, 'Soumya Ranjan Pasayat', 'soumya9437647840@gmail.com', 'srp12390', NULL, 1),
+(0, 'srpasayat', 'srp@gmail.com', 'srp', NULL, 1);
 
 --
 -- Indexes for dumped tables

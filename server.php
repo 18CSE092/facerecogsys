@@ -41,7 +41,7 @@ if (isset($_POST['register'])) {
         mysqli_query($db, $sql);
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
-       header('location: face.php');
+       header('location: index.php');
     }
 }
 
@@ -75,13 +75,13 @@ if (isset($_POST['login'])) {
                         //admin
                         $_SESSION['username'] = $username;
                         $_SESSION['success'] = "You are now logged in admin";
-                        header('location: face.php');
+                        header('location: index.php');
                     }
                     else {
                         //user
                         $_SESSION['username'] = $username;
                         $_SESSION['success'] = "You are now logged in";
-                        header('location: face.php');
+                        header('location: index.php');
                     }
                 
             }

@@ -1,3 +1,16 @@
+<?php include('server.php');
+if (!isset($_SESSION['success']))
+    header('location: login.php'); 
+    $query = "SELECT * FROM `user` WHERE `username`='{$_SESSION['username']}' ; ";
+    //     echo $query;
+          $result = mysqli_query($db,$query);
+          if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)){
+                  if($row['exam']==0)
+                    header('location: result.php');
+              }
+          }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +39,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-gray-900">
         <div class="row">
             <div class="col-2 border border-5">
                 <div class="row " id="btn">

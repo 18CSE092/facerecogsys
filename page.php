@@ -1,7 +1,9 @@
-
+<?php include('server.php');
+if (!isset($_SESSION['success']))
+    header('location: login.php'); ?>
 <?php
-session_start();
-$username = "srp";
+
+$username = $_SESSION['username'];
 $db = mysqli_connect('localhost', 'root', '', 'registration');
 $query = "SELECT * FROM `question`;";
 $result = mysqli_query($db, $query) or die("SQL Query Failed.");

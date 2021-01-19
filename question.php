@@ -1,6 +1,9 @@
+<?php include('server.php');
+if (!isset($_SESSION['success']))
+    header('location: login.php'); ?>
 <?php
-session_start();
-$username = "srp";
+
+$username = $_SESSION['username'];
 $page = 0;
 if(isset($_POST["page_no"])){
     $page = $_POST["page_no"];
@@ -50,7 +53,7 @@ if(mysqli_num_rows($result1) > 0){
              $output .= "<button type='button' class='btn btn-primary'  id='pageid' data-eid='{$page}' disabled>save & next</button>&nbsp;&nbsp;";
              else
              $output .= "<button type='button' class='btn btn-primary'  id='pageid' data-eid='{$page}' >save & next</button>&nbsp;&nbsp;";
-            $output .= "<button type='button' class='btn btn-success'>submit</button><br><br>";
+            $output .= "<a href='index.php?id=1><button type='button' class='btn btn-success'>submit</button></a><br><br>";
         }
     }
 }else{

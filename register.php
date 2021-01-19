@@ -1,10 +1,9 @@
 <?php require 'server.php';
 //session_start();
 if( isset($_SESSION['success'] ) )
-	  header('location: face.php');
+	  header('location: index.php');
 
 ?>
-
 <!DOCTYPE html>
 
 <html>
