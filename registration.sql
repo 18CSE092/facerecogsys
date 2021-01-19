@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2021 at 12:51 PM
+-- Generation Time: Jan 19, 2021 at 07:50 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.25
 
@@ -40,11 +40,16 @@ CREATE TABLE `correct` (
 --
 
 INSERT INTO `correct` (`username`, `qnum`, `ans`, `answered`, `visited`) VALUES
-('srp', 1, '9', 'yes', 'yes'),
-('srp', 5, ' 2 2 3', 'yes', 'yes'),
-('srp', 2, '', 'no', 'yes'),
-('srp', 3, 'No output', 'yes', 'yes'),
-('srp', 4, '0', 'yes', 'yes');
+('Bhagbat', 1, '1', 'yes', 'yes'),
+('Bhagbat', 2, '-11', 'yes', 'yes'),
+('Bhagbat', 3, 'is the best policy', 'yes', 'yes'),
+('Bhagbat', 4, '2', 'yes', 'yes'),
+('Bhagbat', 5, '2 3 3', 'yes', 'yes'),
+('nice', 1, '1', 'yes', 'yes'),
+('nice', 2, '10', 'yes', 'yes'),
+('nice', 3, 'Honesty\n', 'yes', 'yes'),
+('nice', 4, 'No output', 'yes', 'yes'),
+('nice', 5, ' 2 2 3', 'yes', 'yes');
 
 -- --------------------------------------------------------
 
@@ -98,9 +103,9 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`, `staff`, `exam`) VALU
 (0, 'soumyapasayat', 'srppasayat@gmail.com', 'srp1290', 1, 1),
 (1, 'soumyapasayat', 'srppasayat@gmail.com', 'srp1290', 1, 1),
 (0, 'jashwant', 'jpradhan@gmail.com', 'jashu', NULL, 1),
-(0, 'nice', 'nice@gmail.com', 'nice', NULL, 1),
+(0, 'nice', 'nice@gmail.com', 'nice', NULL, 0),
 (0, 'srp', 'srp@gmail.com', 'srp', NULL, 0),
-(0, 'Bhagbat ', 'bhagbat@gmail.com', 'bhagbat', NULL, 1),
+(0, 'Bhagbat', 'bhagbat@gmail.com', 'bhagbat', NULL, 0),
 (0, 'Soumya Ranjan Pasayat', 'soumya9437647840@gmail.com', 'srp12390', NULL, 1),
 (0, 'srpasayat', 'srp@gmail.com', 'srp', NULL, 1);
 
